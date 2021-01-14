@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+<!-- Needs to extend from the partial we named base.html as a path in a string -->
+{% block content %}
+    {% for post in posts %}
+        <h1> {{ post.title }}</h1>
+        <h3>Creator: {{ post.author }}</h3>
+        <p>Text: {{ post.content }} </p>
+    {% endfor %}
+{% endblock %}
